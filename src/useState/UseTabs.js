@@ -12,13 +12,13 @@ const content = [
 ];
 
 const useTabs = (initialTab, allTabs) => {
-  const [currentIndex, setCurrentIndex] = useState(initialTab); //초기값 0 받는다
+  const [currentIndex, setCurrentIndex] = useState(initialTab); // 초기값 0 받는다
 
   if (!allTabs || !Array.isArray(allTabs)) {
-    //Array.isArray() 메서드는 해당인자가 Array인지 알려준다
+    // Array.isArray() 메서드는 해당인자가 Array인지 알려준다
     return;
   }
-  //allTabs[currentIndex] = allTabs[0]  배열 allTabs중 첫번째 가리킨다
+  // allTabs[currentIndex] = allTabs[0]  배열 allTabs중 첫번째 가리킨다
   return {
     currentItem: allTabs[currentIndex],
     changeItem: setCurrentIndex,
@@ -27,17 +27,19 @@ const useTabs = (initialTab, allTabs) => {
 };
 
 const UseTabs = () => {
-  const { currentItem, changeItem } = useTabs(0, content);
+  const { currentItem, changeItem } = useTabs(0, content); // changeItem은 useState의 set이다
 
   return (
     <div>
       <h1>useTabs</h1>
+      <h2>버튼을 눌러 탭 변경</h2>
       {content.map((section, index) => (
         <button key={index} onClick={() => changeItem(index)}>
           {section.tab}
         </button>
       ))}
       <div>{currentItem.content}</div>
+      <hr />
     </div>
   );
 };
