@@ -8,6 +8,9 @@ import UseConfirm from "./useEffect/UseConfirm";
 import UsePreventLeave from "./useEffect/UsePreventLeave";
 import UseFadeIn from "./useEffect/UseFadeIn";
 import UseNetwork from "./useEffect/UseNetwork";
+import UseScroll from "./useEffect/UseScroll";
+import UseFullScreen from "./useEffect/UseFullScreen";
+import UseNotification from "./useEffect/UseNotification";
 
 const App = () => {
   return (
@@ -21,6 +24,9 @@ const App = () => {
       <UsePreventLeave />
       <UseFadeIn />
       <UseNetwork />
+      <UseScroll />
+      <UseFullScreen />
+      <UseNotification />
     </>
   );
 };
